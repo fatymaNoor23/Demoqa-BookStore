@@ -1,33 +1,34 @@
 import assert from 'soft-assert';
-import { authorTab, imageTab, loginButton, publisherTab, searchBox, titleTab } from '../user_interface/bookStore.ui';
+import *as bookStorePage from '../user_interface/bookStore.ui';
 import bookData from "../../utils/bookInfor.json"
+
 export async function verifyLoginBtnDisplay() {
-  await assert.softAssert(await loginButton.isDisplayed(), true,"error",[]);
+  await assert.softAssert(await bookStorePage.loginButton.isDisplayed(), true,"error",[]);
   await assert.softAssertAll();
 }
 
 export async function verifySearchBtnDisplay() {
-  await assert.softAssert(await searchBox.isDisplayed(), true,"error",[]);
+  await assert.softAssert(await bookStorePage.searchBox.isDisplayed(), true,"error",[]);
   await assert.softAssertAll();
 }
 
 export async function verifyImageTabDisplay() {
-  await assert.softAssert(await imageTab.isDisplayed(), true,"error",[]);
+  await assert.softAssert(await bookStorePage.imageTab.isDisplayed(), true,"error",[]);
   await assert.softAssertAll();
 }
 
 export async function verifyTitleTabDisplay() {
-  await assert.softAssert(await titleTab.isDisplayed(), true,"error",[]);
+  await assert.softAssert(await bookStorePage.titleTab.isDisplayed(), true,"error",[]);
   await assert.softAssertAll();
 }
 
 export async function verifyAuthorTabDisplay() {
-  await assert.softAssert(await authorTab.isDisplayed(), true,"error",[]);
+  await assert.softAssert(await bookStorePage.authorTab.isDisplayed(), true,"error",[]);
   await assert.softAssertAll();
 }
 
 export async function verifyPublisherTabDisplay() {
-  await assert.softAssert(await publisherTab.isDisplayed(),true,"error",[]);
+  await assert.softAssert(await bookStorePage.publisherTab.isDisplayed(),true,"error",[]);
   await assert.softAssertAll();
 }
 
