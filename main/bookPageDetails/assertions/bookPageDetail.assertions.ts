@@ -1,6 +1,6 @@
 import assert from 'soft-assert'
 import data from '../../utils/bookInfor.json';
-import { pages, subTitle, titleName, webUrl } from '../user_interface/bookPageDetail.ui';
+
 export async function verifyTitleName() {
     const titleText=await data.Title;
     await assert.softAssert( titleText,"You Don't Know JS", "error",[]);
@@ -14,7 +14,7 @@ export async function verifySubTitleName() {
 }
 
 export async function verifypageNumbers() {
-    const pageText=data.Pages;
+    const pageText=await data.Pages;
     await assert.softAssert(pageText,278,"error",[]);
     await assert.softAssertAll();
 }
